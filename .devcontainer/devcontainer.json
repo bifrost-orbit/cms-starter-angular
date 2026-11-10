@@ -1,0 +1,22 @@
+{
+  "name": "CMS Orbit starter for Angular",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "postCreateCommand": "cp -n .env.example .env; npm install",
+  "forwardPorts": [
+    4200
+  ],
+  "portsAttributes": {
+    "4200": {
+      "label": "Website",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "secrets": {
+    "CMS_API_URL": {
+      "description": "The API address from CMS Orbit, under Configuration › Environments"
+    },
+    "CMS_PUBLIC_KEY": {
+      "description": "A public key from CMS Orbit, under Configuration › API keys"
+    }
+  }
+}
